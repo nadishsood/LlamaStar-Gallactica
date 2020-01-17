@@ -14,27 +14,26 @@ export default class Game{
 
       });
 
-      this.trafficCar = new TrafficCar(this);
 
-    //   this.traffic = [];
+      this.traffic = [];
 
-    //   setInterval(()=> this.populateTraffic(), 5000);
+      setInterval(()=> this.populateTraffic(), 5000);
 
       
   }  
 
-    // populateTraffic(){
-    //     let trafficCar = new TrafficCar(this);
-    //     this.traffic.push(trafficCar);
-    // }
+    populateTraffic(){
+        let trafficCar = new TrafficCar(this);
+        this.traffic.push(trafficCar);
+    }
 
   update(){
     this.road.update();
     this.playerCar.update();
-    this.trafficCar.update();
+    // this.trafficCar.update();
 
-    // this.traffic.forEach((trafficCar) => {
-    //     trafficCar.update();
-    // })
+    this.traffic.forEach((trafficCar) => {
+        trafficCar.update();
+    })
   }
 }

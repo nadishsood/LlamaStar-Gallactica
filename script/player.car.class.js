@@ -40,7 +40,7 @@ export default class PlayerCar{
         }
 
         update(){
-           this. context.drawImage(this.car, this._positionX, this._positionY, 70, 70);
+           this. context.drawImage(this.car, this._positionX, this._positionY, 60, 60);
 
         }
 }
