@@ -25,6 +25,7 @@ function gameLoop(){
 
     yOffset +=10;
     context.drawImage(car, 225, 400);
+    
     requestAnimationFrame(gameLoop);
 }
 
