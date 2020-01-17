@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <meta charset = 'UTF-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Llama Racer</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.0/d3.min.js"></script>
+
+        <script src = 'game.js' type="module"></script>
+        <style>
+            canvas{
+                background: black;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            #scoreboard{
+                width: 500px;
+                height: 800px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            #scoreboard .inner-board{
+                width: inherit;
+                height: inherit;
+                position: relative;
+            }
+
+            #scoreboard .inner-board .fuel-meter{
+                position: relative;
+                left: 10px;
+                top: 10px;
+                display: flex;
+            }
+            #scoreboard .inner-board .fuel-meter .fuel-level-container{
+                width: 100px;
+                padding: 0px 5px ; 
+            }
+            #scoreboard .inner-board .fuel-meter .fuel-level-container .fuel-level{
+                width: 50px;
+                height: 20px;
+                background-color: green;    
+            }
+
+
+            .meter-box{
+                color: red;
+                background-color: white;
+                opacity: 50%;
+                width: 150px;
+                padding: 2px;
+            }
+
+            #scoreboard .inner-board .time-meter{
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                display: flex;
+            
+
+            }
+
+            #scoreboard .inner-board .time-meter .label{
+                margin-right: 10px;
+
+            }
+
+            #scoreboard .inner-board .speedo-meter{
+                position: absolute;
+                left: 10px;
+                top: 50px;
+                display: flex;
+            }
+            #scoreboard .inner-board .speedo-meter .speed{
+                width: 30px;
+                text-align: right;
+            }
+            #scoreboard .inner-board .speedo-meter .unit{
+                margin-left: 5px;
+            }
+
+            #scoreboard .inner-board .distance-meter{
+                position: absolute;
+                right: 10px;
+                top: 50px;
+                display: flex;
+            }
+            #scoreboard .inner-board .distance-meter .distance{
+                margin-right: 10px;
+            }
+
+
+             
+        </style>
+    </head>
+    <body>
+
+        <canvas id = 'canvas' width='512' height = '850'></canvas>
+        <div id='scoreboard'>
+            <div class='inner-board'>
+                <div class='fuel-meter meter-box'>
+                    <div class="label">FUEL</div>
+                    <div class="fuel-level-container">
+                        <div class='fuel-level'></div>
+                    </div>
+                </div>
+
+                <div class = 'time-meter meter-box'>
+                    <div class = 'label'>
+                        TIME LAPS:-
+                    </div>
+                    <div class="time">
+                        00:00:00
+                    </div>
+                </div>
+                <!-- <---> -->
+
+                <div class = 'speedo-meter meter-box'>
+                        <div class = 'speed'>
+                            0
+                        </div>
+                        <div class="unit">
+                            lightYears/second
+                        </div>
+                    </div>
+
+                <!-- <--> -->
+
+                <div class = 'distance-meter meter-box'>
+                        <div class = 'distance'>
+                            10KMs
+                        </div>
+                        <div class="label">
+                            LEFT
+                        </div>
+                    </div>
+
+
+
+
+
+            </div>
+        </div>
+
+    </body>
+</html>
