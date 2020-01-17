@@ -13,13 +13,13 @@ export default class PlayerCar{
         }
 
         moveLeft(){
-            this._positionX -=5;
+            this._positionX -=15 ;
             if(this._positionX <= 150) this._positionX = 150; //constraint 
 
         }
 
         moveRight(){
-            this._positionX += 5;
+            this._positionX += 15;
             if(this._positionX >= 300) this._positionX = 300; //constraint
         }
 
@@ -42,5 +42,18 @@ export default class PlayerCar{
         update(){
            this. context.drawImage(this.car, this._positionX, this._positionY, 60, 60);
 
+        }
+
+        get positionX(){
+            return this._positionX;
+        }
+
+        get positionY(){
+            return this._positionY;
+        }
+
+        resetPosition(){
+            this._positionX = 225;
+            this._positionY = 680;
         }
 }
