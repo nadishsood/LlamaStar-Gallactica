@@ -1,3 +1,17 @@
+
+var docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(
+document.querySelectorAll('*'),
+function(el) {
+    if (el.offsetWidth > docWidth) {
+    console.log(el);
+    }
+}
+);
+
+
+
 import Game from './game.class.js';
 
 let canvas = document.querySelector('#canvas');

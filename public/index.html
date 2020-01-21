@@ -1,13 +1,19 @@
 <html>
     <head>
         <meta charset = 'UTF-8'>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Llama Racer</title>
-        <script src = "/script/index.js" type="module"></script>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.0/d3.min.js"></script>
+        <link href="/stylesheets/fontawesome-free-5.12.0-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+        <link href="/stylesheets/app.css" rel="stylesheet"> <!--load all styles -->
 
+
+        
         <style>
+            body{
+         background-image: url('/images/back.jpeg');
+        background-size: 100% 100%;
+            }
             canvas{
                 background: black;
                 position: absolute;
@@ -112,13 +118,91 @@
                 
             }
 
-            body{
-                background: url("./images/pexels-photo-3214110.jpeg");
-            }
 
             #canvas{
                 border-radius: 30px;
             }
+
+            .back-image{
+                
+  width: 100%;
+  height: auto;
+
+            }
+
+            /* Basic styling */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+}
+nav {
+    background: #222;
+    padding: 5px 20px;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.logo a:hover {
+    text-decoration: none;
+}
+.menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+}
+.logo a,
+.toggle a {
+    font-size: 20px;
+}
+.button.secondary {
+    border-bottom: 1px #444 solid;
+}
+
+
+/* Mobile menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle {
+    order: 1;
+}
+.item.button {
+    order: 2;
+}
+.item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+.item.active {
+    display: block;
+}
+
+#canvas{
+    height: 790;
+    width: 512;
+    margin-top: 30px;
+}
+body{
+    height: 794px;
+    width: 100%;
+}
+
 
 
 
@@ -127,6 +211,21 @@
         </style>
     </head>
     <body>
+
+
+            <nav>
+                    <ul class="menu">
+                        <li class="logo"><a href="#">LlamaStar Gallactica</a></li>
+                        <li class="item"><a href="#"></a>Use up and down arrow keys to accelerate and decelearte. </li>
+                        <li class="item"><a href="#"></a>Use the side arrow keys to save llama from incoming traffic.</li>
+                        
+                        <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+                    </ul>
+                </nav>
+
+
+                <!-- <img class ='back-image' src = "/images/pexels-photo-3214110.jpeg"> -->
+
 
         <canvas id = 'canvas' width='512' height = '850'></canvas>
         <div id='scoreboard'>
@@ -181,6 +280,23 @@
         </div>
 
         <!-- <script src = "./script/index.js" type="module"></script> -->
+
+        <script src = "/script/jquery.js" type="module"></script>
+
+        <script src = "/script/index.js" type="module"></script>
+
+        <script>
+            var docWidth = document.documentElement.offsetWidth;
+
+                [].forEach.call(
+                document.querySelectorAll('*'),
+                function(el) {
+                    if (el.offsetWidth > docWidth) {
+                    console.log(el);
+                    }
+                }
+                );
+        </script>
 
     </body>
 </html>
