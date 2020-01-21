@@ -1,0 +1,24 @@
+{
+  "name": "llama",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nadishsood/Inter-Galactic-Llama-Racer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nadishsood/Inter-Galactic-Llama-Racer/issues"
+  },
+  "homepage": "https://github.com/nadishsood/Inter-Galactic-Llama-Racer#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "kill-port": "^1.6.0",
+    "nodemon": "^2.0.2"
+  }
+}
