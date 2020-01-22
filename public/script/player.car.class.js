@@ -5,7 +5,7 @@ export default class PlayerCar{
         this._positionX = 225; //starting position
         this._positionY = 680; //starting position
 
-        this._speed = 0;
+        this._speed = 10;
         this.maxSpeed = 120;
 
         this.car = new Image;
