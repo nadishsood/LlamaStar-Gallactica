@@ -50,6 +50,7 @@ export default class Game{
     }
 
   update(){
+      
     if(this._paused) return;
     this.road.update();
     this.playerCar.update();
