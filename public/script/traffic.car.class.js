@@ -6,7 +6,7 @@ export default class TrafficCar{
         this.car.src = "/images/laTa.png";
 
         this._positionY = (Math.random() * 500) * -1; //start of the enemy car behind 0 or outside the screen 
-        this.speed = 7//for variable speed of incoming traffic/enemy car between 3 to 10 
+        this.speed = Math.floor(Math.random() * (7 - 6 + 1)) + 6//for variable speed of incoming traffic/enemy car between 3 to 10 
         this.lane = Math.floor(Math.random() * 3);
         this.lanePosX = [150, 225, 300, 150];
 

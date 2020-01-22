@@ -13,7 +13,7 @@ export default class PlayerCar{
         }
 
         moveLeft(){
-            this._positionX -=15 ;
+            this._positionX -=15;
             if(this._positionX <= 150) this._positionX = 150; //constraint 
 
         }
@@ -40,7 +40,7 @@ export default class PlayerCar{
         }
 
         update(){
-           this. context.drawImage(this.car, this._positionX, this._positionY, 60, 60);
+           this.context.drawImage(this.car, this._positionX, this._positionY, 60, 60);
 
         }
 

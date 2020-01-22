@@ -1,14 +1,5 @@
 
-var docWidth = document.documentElement.offsetWidth;
-
-[].forEach.call(
-document.querySelectorAll('*'),
-function(el) {
-    if (el.offsetWidth > docWidth) {
-    console.log(el);
-    }
-}
-);
+console.log('hi');
 
 
 
@@ -31,4 +22,17 @@ function gameLoop(){
     requestAnimationFrame(gameLoop);
 }
 
+
+
+$(function() {
+    $(".toggle").on("click", function() {
+        if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+            $(this).find("a").html("<i class='fas fa-bars'></i>");
+        } else {
+            $(".item").addClass("active");
+            $(this).find("a").html("<i class='fas fa-times'></i>");
+        }
+    });
+});
 

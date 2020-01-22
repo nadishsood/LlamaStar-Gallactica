@@ -4,7 +4,7 @@ export function isCollide(playerCar, traffic){
         let trafficCar = traffic[i];
         if(trafficCar.positionY > 620 && trafficCar.positionY < 740 ){
            //check if this result is less than 60, return true. Means collision happened. 
-            if(Math.abs(trafficCar.positionX - playerCar.positionX) <= 50){
+            if(Math.abs(trafficCar.positionX - playerCar.positionX) <= 50 ){
                 return true;
             }; 
             

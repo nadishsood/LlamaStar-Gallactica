@@ -18,7 +18,7 @@ export default class Game{
 
       this.traffic = [];
 
-      setInterval(()=> this.populateTraffic(), 3000);
+      setInterval(()=> this.populateTraffic(), 2000);
 
       
   }  
