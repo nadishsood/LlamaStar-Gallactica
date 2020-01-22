@@ -53,8 +53,11 @@ body {
   }
 
   body{
-      zoom: 90%;
-  }
+    zoom: 0.7;
+}
+
+
+
 
 
 /* 
@@ -298,6 +301,7 @@ font-family: 'Orbitron', sans-serif;
 .container{
 height: 100px;
 }
+
 
 
 
