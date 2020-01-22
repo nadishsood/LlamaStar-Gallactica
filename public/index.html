@@ -7,321 +7,23 @@
         <link href="/stylesheets/fontawesome-free-5.12.0-web/css/all.css" rel="stylesheet"> <!--load all styles -->
         <link href="/stylesheets/app.css" rel="stylesheet"> <!--load all styles -->
 
-
-        
-        <style>
-
-            .logo{
-                font-size: 50px;
-
-            }
-            body{
-         background-image: url('/images/back.jpeg');
-        background-size: 100% 100%;
-            }
-            canvas{
-                background: black;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-            #scoreboard{
-                width: 500px;
-                height: 800px;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-
-            #scoreboard .inner-board{
-                width: inherit;
-                height: inherit;
-                position: relative;
-            }
-
-            #scoreboard .inner-board .fuel-meter{
-                position: relative;
-                left: 10px;
-                top: 10px;
-                display: flex;
-            }
-            #scoreboard .inner-board .fuel-meter .fuel-level-container{
-                width: 100px;
-                padding: 0px 5px ; 
-            }
-            #scoreboard .inner-board .fuel-meter .fuel-level-container .fuel-level{
-                width: 50px;
-                height: 20px;
-                background-color: green;    
-            }
-
-
-            .meter-box{
-                background: black;
-                color: red;
-                width: 150px;
-                padding: 2px;
-                font-family: 'Orbitron', sans-serif;
-            }
-
-            #scoreboard .inner-board .time-meter{
-                position: absolute;
-                right: 10px;
-                top: 10px;
-                display: flex;
-            
-
-            }
-
-            #scoreboard .inner-board .time-meter .label{
-                margin-right: 10px;
-
-            }
-
-            #scoreboard .inner-board .speedo-meter{
-                position: absolute;
-                left: 10px;
-                top: 50px;
-                display: flex;
-            }
-            #scoreboard .inner-board .speedo-meter .speed{
-                width: 30px;
-                text-align: right;
-            }
-            #scoreboard .inner-board .speedo-meter .unit{
-                margin-left: 5px;
-            }
-
-            #scoreboard .inner-board .distance-meter{
-                position: absolute;
-                right: 10px;
-                top: 50px;
-                display: flex;
-            }
-            #scoreboard .inner-board .distance-meter .distance{
-                margin-right: 10px;
-            }
-
-
-            #scoreboard .inner-board .messages{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-               
-
-            }
-
-            .try-again{
-                
-                display: block;
-                border: 1px solid black;
-                border-radius: 10px;
-                display: none;
-                
-            }
-
-
-            #canvas{
-                border-radius: 30px;
-            }
-
-            .back-image{
-                
-  width: 100%;
-  height: auto;
-
-            }
-
-            /* Basic styling */
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-body {
-    font-family: sans-serif;
-}
-nav {
-    background: #222;
-    opacity: 0.9;
-    padding: 5px 20px;
-    color: #38FF14}
-ul {
-    list-style-type: none;
-}
-a {
-    color: white;
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-.logo a:hover {
-    text-decoration: none;
-}
-.menu li {
-    font-size: 16px;
-    padding: 15px 5px;
-    white-space: nowrap;
-}
-.logo a,
-.toggle a {
-    font-size: 30px;
-}
-.button.secondary {
-    border-bottom: 1px #444 solid;
-}
-
-
-/* Mobile menu */
-.menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-.toggle {
-    order: 1;
-}
-.item.button {
-    order: 2;
-}
-.item {
-    width: 100%;
-    text-align: center;
-    order: 3;
-    display: none;
-}
-.item.active {
-    display: block;
-}
-
-#canvas{
-    height: 790;
-    width: 512;
-    margin-top: 30px;
-}
-body{
-    height: 794px;
-    width: 100%;
-}
-
-
-/* Tablet menu */
-@media all and (min-width: 600px) {
-    .menu {
-        justify-content: center;
-    }
-    .logo {
-        flex: 1;
-    }
-    .toggle {
-        flex: 1;
-        text-align: right;
-    }
-    .item.button {
-        width: auto;
-        order: 1;
-        display: block;
-    }
-    .toggle {
-        order: 2;
-    }
-    .button.secondary {
-        border: 0;
-    }
-    .button a {
-        padding: 7.5px 15px;
-        background: teal;
-        border: 1px #006d6d solid;
-    }
-    .button.secondary a {
-        background: transparent;    
-    }
-    .button a:hover {
-        text-decoration: none;
-    }
-    .button:not(.secondary) a:hover {
-        background: #006d6d;
-        border-color: #005959;
-    }
-    .button.secondary a:hover {
-        color: #ddd;
-    } 
-}
-
-
-/* Desktop menu */
-@media all and (min-width: 900px) {
-    .item {
-        display: block;
-        width: auto;
-    }
-    .toggle {
-        display: none;
-    }
-    .logo {
-        order: 0;
-        font-family: 'Orbitron', sans-serif;
-
-    }
-    .item {
-        order: 1;
-    }
-    .button {
-        order: 2;
-    }
-    .menu li {
-        padding: 15px 10px;
-    }
-    .menu li.button {
-        padding-right: 0;
-    }
-}
-
-ul{
-    font-family: 'Orbitron', sans-serif;
-
-}
-
-.container{
-    height: 100px;
-}
-
-
-
-             
-        </style>
     </head>
     <body>
-
-
-            <nav>
+        <nav>
                     <ul class="menu">
                         <li class="logo" id='name'><a href="#">LlamaStar Gallactica</a></li>
                         <li class="item"><a href="#"></a>Use up and down arrow keys to accelerate and decelerate.</li>
                         <li class="item"><a href="#"></a>|</li>
-
                         <li class="item"><a href="#"></a>Use the side arrow keys to navigate llama through incoming traffic.</li>
-                        
                         <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
                     </ul>
-                </nav>
+        </nav>
 
-
-                <!-- <img class ='back-image' src = "/images/pexels-photo-3214110.jpeg"> -->
-
-                <div class="container">
-
-                        <canvas id = 'canvas' width='512' height = '850'></canvas>
+         <div class="container">
+            <canvas id = 'canvas' width='512' height = '850'></canvas>
                         <div id='scoreboard'>
                             <div class='inner-board'>
-                                
-                
-                                <div class = 'speedo-meter meter-box'>
+                                     <div class = 'speedo-meter meter-box'>
                                         <div class = 'speed'>
                                             0
                                         </div>
@@ -329,41 +31,14 @@ ul{
                                             lightYears/second
                                         </div>
                                     </div>
-                
-                                
-                
-                                <div class="messages">
-                                    
-                                        <img class ='try-again' src='./images/Screenshot 2020-01-17 14.12.10.png'>
-                                    
-                                </div>
-                
-                
-                
-                
+                                     <div class="messages">
+                                        <img class ='try-again' src='./images/try-again.png'>
+                                    </div>
                             </div>
                         </div>
-                </div>
+        </div>
       
-
-        <!-- <script src = "./script/index.js" type="module"></script> -->
-
         <script src = "/script/jquery.js" type="module"></script>
-
         <script src = "/script/index.js" type="module"></script>
-
-        <script>
-            var docWidth = document.documentElement.offsetWidth;
-
-                [].forEach.call(
-                document.querySelectorAll('*'),
-                function(el) {
-                    if (el.offsetWidth > docWidth) {
-                    console.log(el);
-                    }
-                }
-                );
-        </script>
-
     </body>
 </html>

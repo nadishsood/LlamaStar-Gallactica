@@ -14,14 +14,9 @@ export default class Game{
           playerCar: this.playerCar
 
       });
-
-
       this.traffic = [];
-
       setInterval(()=> this.populateTraffic(), 2000);
-
-      
-  }  
+    }  
 
     populateTraffic(){
         if(this._paused) return; //if game is paused, don't create traffic cars. 
@@ -33,8 +28,6 @@ export default class Game{
         if(e.keyCode!== 32){
             return;
         }
-
-
         this.traffic = [];
         this.playerCar.resetPosition();
         this.playerCar.speed = 10;
@@ -45,17 +38,14 @@ export default class Game{
 
         let body = document.querySelector("canvas");
         body.style.opacity = 1;
-
-
     }
 
   update(){
-      
+
     if(this._paused) return;
     this.road.update();
     this.playerCar.update();
-    // this.trafficCar.update();
-
+    
     this.traffic.forEach((trafficCar) => {
         trafficCar.update();
     });
@@ -70,9 +60,6 @@ export default class Game{
         body.style.opacity = 0.5;
         screenTryAgain.style.opacity = 1;
         document.onkeydown = e => this.tryAgain(e);
-
-        
-
     }
   }
 }
