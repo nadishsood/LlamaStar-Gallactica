@@ -1,4 +1,4 @@
-# LllamStar-Gallactica
+# LlamaStar-Gallactica
 Get your Llama through space!
 
 TO PLAY THE GAME
